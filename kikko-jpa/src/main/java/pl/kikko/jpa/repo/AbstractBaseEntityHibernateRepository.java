@@ -1,11 +1,14 @@
 package pl.kikko.jpa.repo;
 
 import java.io.Serializable;
+
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+
 import pl.kikko.jpa.entity.BaseEntity;
 
-public class AbstractBaseEntityHibernateRepository<T extends BaseEntity, ID extends Serializable> implements GenericBaseEntityRepository<T, ID> {
+public class AbstractBaseEntityHibernateRepository<T extends BaseEntity, ID extends Serializable>
+        implements GenericBaseEntityRepository<T, ID> {
 
     protected SessionFactory sessionFactory;
 

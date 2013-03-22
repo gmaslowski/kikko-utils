@@ -1,6 +1,7 @@
 package pl.kikko.jpa.repo;
 
 import java.io.Serializable;
+
 import pl.kikko.jpa.entity.BaseEntity;
 
 public interface GenericBaseEntityRepository<T extends BaseEntity, ID extends Serializable> {
