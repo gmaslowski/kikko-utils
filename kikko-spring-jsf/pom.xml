@@ -10,4 +10,24 @@
         <version>0.0.1-SNAPSHOT</version>
         <relativePath>..</relativePath>
     </parent>
+
+    <properties>
+        <com.sun.faces.jsf-api.version>2.1.16</com.sun.faces.jsf-api.version>
+        <com.sun.faces.jsf-impl.version>2.1.18</com.sun.faces.jsf-impl.version>
+    </properties>
+
+    <dependencies>
+        <!-- JSF -->
+        <dependency>
+            <groupId>com.sun.faces</groupId>
+            <artifactId>jsf-api</artifactId>
+            <version>${com.sun.faces.jsf-api.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.sun.faces</groupId>
+            <artifactId>jsf-impl</artifactId>
+            <version>${com.sun.faces.jsf-impl.version}</version>
+        </dependency>
+    </dependencies>
 </project>
