@@ -7,12 +7,12 @@ import org.hibernate.SessionFactory;
 
 import pl.kikko.jpa.entity.BaseEntity;
 
-public class AbstractBaseEntityHibernateRepository<T extends BaseEntity, ID extends Serializable>
+public abstract class AbstractBaseEntityHibernateRepository<T extends BaseEntity, ID extends Serializable>
         implements GenericBaseEntityRepository<T, ID> {
 
     protected SessionFactory sessionFactory;
 
-    private Class<T> persistentClass;
+    protected Class<T> persistentClass;
 
     protected Session session() {
         return sessionFactory.getCurrentSession();
@@ -39,4 +39,5 @@ public class AbstractBaseEntityHibernateRepository<T extends BaseEntity, ID exte
         session().delete(entity);
     }
 
+    protected abstract void setSessionFactory(SessionFactory sessionFactory);
 }
