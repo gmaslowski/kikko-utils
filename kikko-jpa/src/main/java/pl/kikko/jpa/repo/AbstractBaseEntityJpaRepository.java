@@ -1,6 +1,7 @@
 package pl.kikko.jpa.repo;
 
 import java.io.Serializable;
+import java.lang.reflect.ParameterizedType;
 
 import javax.persistence.EntityManager;
 
@@ -12,6 +13,12 @@ public class AbstractBaseEntityJpaRepository<T extends BaseEntity, ID extends Se
     protected EntityManager em;
 
     private Class<T> persistentClass;
+
+    @SuppressWarnings("unchecked")
+    public AbstractBaseEntityJpaRepository() {
+        this.persistentClass = ((Class<T>) ((ParameterizedType) getClass()
+                .getGenericSuperclass()).getActualTypeArguments()[0]);
+    }
 
     @Override
     public T getById(ID entityId) {
@@ -31,6 +38,11 @@ public class AbstractBaseEntityJpaRepository<T extends BaseEntity, ID extends Se
     @Override
     public void delete(T entity) {
         em.remove(entity);
+    }
+
+    @Override
+    public boolean exists(Long entityId) {
+        return em.find(persistentClass, entityId) != null;
     }
 
 }

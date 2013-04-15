@@ -1,6 +1,7 @@
 package pl.kikko.jpa.repo;
 
 import java.io.Serializable;
+import java.lang.reflect.ParameterizedType;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -13,6 +14,12 @@ public abstract class AbstractBaseEntityHibernateRepository<T extends BaseEntity
     protected SessionFactory sessionFactory;
 
     protected Class<T> persistentClass;
+
+    @SuppressWarnings("unchecked")
+    public AbstractBaseEntityHibernateRepository() {
+        this.persistentClass = ((Class<T>) ((ParameterizedType) getClass()
+                .getGenericSuperclass()).getActualTypeArguments()[0]);
+    }
 
     protected Session session() {
         return sessionFactory.getCurrentSession();
@@ -37,6 +44,11 @@ public abstract class AbstractBaseEntityHibernateRepository<T extends BaseEntity
     @Override
     public void delete(T entity) {
         session().delete(entity);
+    }
+
+    @Override
+    public boolean exists(Long entityId) {
+        return session().get(persistentClass, entityId) != null;
     }
 
     protected abstract void setSessionFactory(SessionFactory sessionFactory);

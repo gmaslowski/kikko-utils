@@ -13,4 +13,6 @@ public interface GenericBaseEntityRepository<T extends BaseEntity, ID extends Se
     void delete(ID entityId);
 
     void delete(T entity);
+
+    boolean exists(Long entityId);
 }
