@@ -31,7 +31,7 @@
 		<url>https://github.com/kreuzwerker/AIDA.DAM</url>
 		<connection>scm:git:git://bitbucket.org/gmaslowski/kikko-utils.git</connection>
 		<developerConnection>scm:git:https://gmaslowski@bitbucket.org/gmaslowski/kikko-utils.git</developerConnection>
-	  <tag>HEAD</tag>
+	  <tag>0.1.0-RELEASE</tag>
   </scm>
 
 	<dependencyManagement>
