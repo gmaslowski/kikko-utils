@@ -1,9 +1,8 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>pl.kikko.utils</groupId>
 	<artifactId>utils-parent</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.1</version>
 	<packaging>pom</packaging>
 	<name>Kikko Utils</name>
 
@@ -32,7 +31,8 @@
 		<url>https://github.com/kreuzwerker/AIDA.DAM</url>
 		<connection>scm:git:git://bitbucket.org/gmaslowski/kikko-utils.git</connection>
 		<developerConnection>scm:git:https://gmaslowski@bitbucket.org/gmaslowski/kikko-utils.git</developerConnection>
-	</scm>
+	  <tag>utils-parent-0.0.1</tag>
+  </scm>
 
 	<dependencyManagement>
 		<dependencies>
