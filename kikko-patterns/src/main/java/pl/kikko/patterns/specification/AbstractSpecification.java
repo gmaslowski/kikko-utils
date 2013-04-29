@@ -1,19 +1,19 @@
 package pl.kikko.patterns.specification;
 
-public abstract class AbstractSpecification implements Specification {
+public abstract class AbstractSpecification<T> implements Specification<T> {
 
 	@Override
-	public Specification or(Specification specification) {
-		return new OrSpecification(this, specification);
+	public Specification<T> or(Specification<T> specification) {
+		return new OrSpecification<T>(this, specification);
 	}
 
 	@Override
-	public Specification and(Specification specification) {
-		return new AndSpecification(this, specification);
+	public Specification<T> and(Specification<T> specification) {
+		return new AndSpecification<T>(this, specification);
 	}
 
 	@Override
-	public Specification not(Specification specification) {
-		return new NotSpecification(this);
+	public Specification<T> not(Specification<T> specification) {
+		return new NotSpecification<T>(this);
 	}
 }
