@@ -2,7 +2,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>pl.kikko.utils</groupId>
 	<artifactId>utils-parent</artifactId>
-	<version>0.0.4-SNAPSHOT</version>
+	<version>0.2.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<name>Kikko Utils</name>
 
@@ -31,7 +31,7 @@
 		<url>https://github.com/kreuzwerker/AIDA.DAM</url>
 		<connection>scm:git:git://bitbucket.org/gmaslowski/kikko-utils.git</connection>
 		<developerConnection>scm:git:https://gmaslowski@bitbucket.org/gmaslowski/kikko-utils.git</developerConnection>
-	  <tag>0.1.0-RELEASE</tag>
+	  <tag>HEAD</tag>
   </scm>
 
 	<dependencyManagement>
