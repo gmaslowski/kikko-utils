@@ -1,0 +1,2 @@
+mvn -Dusername=XXX -Dpassword=XXX release:branch -DpreparationGoals="clean install" -DbranchName=XXX
+mvn -Dusername=XXX -Dpassword=XXX release:perform
