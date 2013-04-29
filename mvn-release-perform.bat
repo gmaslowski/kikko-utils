@@ -1,1 +1,1 @@
-mvn release:perform
+mvn -Dusername=gmaslowski -Dpassword=GsEs83dsa release:perform

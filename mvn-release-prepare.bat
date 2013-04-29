@@ -1,1 +1,1 @@
-mvn release:prepare -DpreparationGoals="clean install"
+mvn -Dusername=gmaslowski -Dpassword=GsEs83dsa release:prepare -DpreparationGoals="clean install"
