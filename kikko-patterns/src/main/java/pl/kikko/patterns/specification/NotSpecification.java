@@ -1,15 +1,15 @@
 package pl.kikko.patterns.specification;
 
-public class NotSpecification extends AbstractSpecification {
+public class NotSpecification<T> extends AbstractSpecification<T> {
 
-	private Specification specification;
+	private Specification<T> specification;
 
-	public NotSpecification(Specification specification) {
+	public NotSpecification(Specification<T> specification) {
 		this.specification = specification;
 	}
 
 	@Override
-	public boolean isSatisfiedBy(Object o) {
+	public boolean isSatisfiedBy(T o) {
 		return !specification.isSatisfiedBy(o);
 	}
 
