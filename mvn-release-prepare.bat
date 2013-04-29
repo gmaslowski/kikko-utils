@@ -1,0 +1,1 @@
+mvn release:prepare -DpreparationGoals="clean install"
