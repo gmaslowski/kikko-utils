@@ -1,13 +1,12 @@
 package pl.kikko.patterns.specification;
 
-public interface Specification<T> {
+public interface Specification {
 
-	boolean isSatisfiedBy(T o);
+    boolean isSatisfiedBy(Object o);
 
-	Specification<T> and(Specification<T> spec);
+    Specification and(Specification spec);
 
-	Specification<T> or(Specification<T> spec);
+    Specification or(Specification spec);
 
-	Specification<T> not(Specification<T> spec);
-	
+    Specification not(Specification spec);
 }

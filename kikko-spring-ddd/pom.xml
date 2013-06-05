@@ -1,32 +1,28 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>kikko-jpa</artifactId>
+    <artifactId>kikko-spring-ddd</artifactId>
     <packaging>jar</packaging>
-    <name>Kikko JPA</name>
+    <name>Kikko DDD for Spring</name>
     <parent>
         <artifactId>utils-parent</artifactId>
         <groupId>pl.kikko.utils</groupId>
-        <version>0.2.0-SNAPSHOT</version>
+        <version>0.0.1-SNAPSHOT</version>
         <relativePath>..</relativePath>
     </parent>
 
     <properties>
-        <org.hibernate.version>4.2.0.CR2</org.hibernate.version>
+        <org.springframework.version>3.2.1.RELEASE</org.springframework.version>
     </properties>
 
     <dependencies>
-        <!-- Hibernate -->
+
+        <!-- Spring -->
         <dependency>
-            <groupId>org.hibernate</groupId>
-            <artifactId>hibernate-core</artifactId>
-            <version>${org.hibernate.version}</version>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>${org.springframework.version}</version>
         </dependency>
 
-        <dependency>
-            <groupId>org.hibernate</groupId>
-            <artifactId>hibernate-entitymanager</artifactId>
-            <version>${org.hibernate.version}</version>
-        </dependency>
     </dependencies>
 </project>

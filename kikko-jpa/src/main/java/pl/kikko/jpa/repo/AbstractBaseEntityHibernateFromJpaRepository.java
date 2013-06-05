@@ -9,15 +9,11 @@ import org.hibernate.Session;
 import pl.kikko.jpa.entity.BaseEntity;
 
 public abstract class AbstractBaseEntityHibernateFromJpaRepository<T extends BaseEntity, ID extends Serializable>
-		extends AbstractBaseEntityJpaRepository<T, ID> {
+        extends AbstractBaseEntityJpaRepository<T, ID> {
 
-	protected Session session() {
-		return (Session) em.getDelegate();
-	}
+    protected Session session() {
+        return (Session) em.getDelegate();
+    }
 
-	protected Class<T> persistenceClass() {
-		return persistentClass;
-	}
-
-	protected abstract void setEntityManager(EntityManager em);
+    protected abstract void setEntityManager(EntityManager em);
 }
