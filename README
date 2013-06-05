@@ -1,1 +1,6 @@
 Kikko Utils
+
+Releasing
+mvn -Dusername=XXX -Dpassword=XXX release:branch -DbranchName=XXX
+mvn -Dusername=XXX -Dpassword=XXX release:prepare -DpreparationGoals="clean install"
+mvn -Dusername=XXX -Dpassword=XXX release:perform
