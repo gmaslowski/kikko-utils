@@ -1,14 +1,13 @@
-<<<<<<< HEAD
+
 .metadata
 .settings
 .classpath
 .project
 target
-=======
 *.class
 
-# Package Files #
+# Package Files
 *.jar
 *.war
 *.ear
->>>>>>> 7dfff1aca54b3f104772952d47705e529ed90b15
+
