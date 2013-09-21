@@ -27,5 +27,11 @@
             <artifactId>hibernate-entitymanager</artifactId>
             <version>${org.hibernate.version}</version>
         </dependency>
+
+        <dependency>
+            <groupId>pl.kikko.utils</groupId>
+            <artifactId>kikko-patterns</artifactId>
+            <version>${project.version}</version>
+        </dependency>
     </dependencies>
 </project>

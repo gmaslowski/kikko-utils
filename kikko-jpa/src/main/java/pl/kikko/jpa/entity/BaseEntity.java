@@ -1,11 +1,14 @@
 package pl.kikko.jpa.entity;
 
+import pl.kikko.patterns.builder.AbstractBuildableBuilder;
+import pl.kikko.patterns.builder.Buildable;
+
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.MappedSuperclass;
 
 @MappedSuperclass
-public abstract class BaseEntity {
+public abstract class BaseEntity implements Buildable {
 
     @Id
     @GeneratedValue
@@ -18,4 +21,12 @@ public abstract class BaseEntity {
     public void setId(Long id) {
         this.id = id;
     }
+
+    public abstract class BaseEntityBuilder<TYPE extends BaseEntity, BUILDER extends BaseEntityBuilder<TYPE, BUILDER>> extends AbstractBuildableBuilder<TYPE, BUILDER> {
+        BUILDER id(Long id) {
+            buildable.setId(id);
+            return builder;
+        }
+    }
+
 }
