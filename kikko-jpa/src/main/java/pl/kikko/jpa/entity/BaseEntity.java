@@ -23,7 +23,7 @@ public abstract class BaseEntity implements Buildable {
     }
 
     public static abstract class BaseEntityBuilder<TYPE extends BaseEntity, BUILDER extends BaseEntityBuilder<TYPE, BUILDER>> extends AbstractBuildableBuilder<TYPE, BUILDER> {
-        BUILDER id(Long id) {
+        public BUILDER id(Long id) {
             buildable.setId(id);
             return builder;
         }
