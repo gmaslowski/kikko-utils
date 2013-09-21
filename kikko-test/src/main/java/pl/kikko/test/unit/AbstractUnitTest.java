@@ -1,4 +1,4 @@
-package pl.kikko.jpa.entity;
+package pl.kikko.test.unit;
 
 public class AbstractUnitTest {
 

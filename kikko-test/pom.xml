@@ -3,10 +3,12 @@
     <artifactId>kikko-test</artifactId>
     <packaging>jar</packaging>
     <name>Kikko Test</name>
+
     <parent>
         <artifactId>utils-parent</artifactId>
         <groupId>pl.kikko.utils</groupId>
-        <version>0.2.0-SNAPSHOT</version>
+        <version>0.2.1-SNAPSHOT</version>
         <relativePath>..</relativePath>
     </parent>
+
 </project>
