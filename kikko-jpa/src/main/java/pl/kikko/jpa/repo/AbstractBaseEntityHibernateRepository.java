@@ -1,18 +1,15 @@
 package pl.kikko.jpa.repo;
 
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import pl.kikko.jpa.entity.BaseEntity;
+
 import java.io.Serializable;
 import java.lang.reflect.ParameterizedType;
 
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-
-import pl.kikko.jpa.entity.BaseEntity;
-
-public abstract class AbstractBaseEntityHibernateRepository<T extends BaseEntity, ID extends Serializable>
-        implements GenericBaseEntityRepository<T, ID> {
+public abstract class AbstractBaseEntityHibernateRepository<T extends BaseEntity> implements GenericBaseEntityRepository<T> {
 
     protected SessionFactory sessionFactory;
-
     protected Class<T> persistentClass;
 
     @SuppressWarnings("unchecked")
@@ -27,7 +24,7 @@ public abstract class AbstractBaseEntityHibernateRepository<T extends BaseEntity
 
     @SuppressWarnings("unchecked")
     @Override
-    public T getById(ID entityId) {
+    public T getById(Serializable entityId) {
         return (T) session().load(persistentClass, entityId);
     }
 
@@ -37,7 +34,7 @@ public abstract class AbstractBaseEntityHibernateRepository<T extends BaseEntity
     }
 
     @Override
-    public void delete(ID entityId) {
+    public void delete(Serializable entityId) {
         session().delete(session().load(persistentClass, entityId));
     }
 
