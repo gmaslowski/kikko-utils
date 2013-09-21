@@ -1,17 +1,15 @@
 package pl.kikko.jpa.repo;
 
+import pl.kikko.jpa.entity.BaseEntity;
+
+import javax.persistence.EntityManager;
 import java.io.Serializable;
 import java.lang.reflect.ParameterizedType;
 
-import javax.persistence.EntityManager;
-
-import pl.kikko.jpa.entity.BaseEntity;
-
-public abstract class AbstractBaseEntityJpaRepository<T extends BaseEntity, ID extends Serializable>
-        implements GenericBaseEntityRepository<T, ID> {
+public abstract class AbstractBaseEntityJpaRepository<T extends BaseEntity>
+        implements GenericBaseEntityRepository<T> {
 
     protected EntityManager em;
-
     protected Class<T> persistentClass;
 
     @SuppressWarnings("unchecked")
@@ -21,7 +19,7 @@ public abstract class AbstractBaseEntityJpaRepository<T extends BaseEntity, ID e
     }
 
     @Override
-    public T getById(ID entityId) {
+    public T getById(Serializable entityId) {
         return em.find(persistentClass, entityId);
     }
 
@@ -31,7 +29,7 @@ public abstract class AbstractBaseEntityJpaRepository<T extends BaseEntity, ID e
     }
 
     @Override
-    public void delete(ID entityId) {
+    public void delete(Serializable entityId) {
         em.remove(em.find(persistentClass, entityId));
     }
 
