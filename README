@@ -4,3 +4,5 @@ Releasing
 mvn -Dusername=XXX -Dpassword=XXX release:branch -DbranchName=XXX
 mvn -Dusername=XXX -Dpassword=XXX release:prepare -DpreparationGoals="clean install"
 mvn -Dusername=XXX -Dpassword=XXX release:perform
+
+https://www.codeship.io/projects/6eb53a80-06b8-0131-6d26-7e266fd9635d/status
