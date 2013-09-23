@@ -6,7 +6,7 @@
     <parent>
         <artifactId>utils-parent</artifactId>
         <groupId>pl.kikko.utils</groupId>
-        <version>0.2.1-SNAPSHOT</version>
+        <version>0.2.1-RC</version>
         <relativePath>..</relativePath>
     </parent>
 </project>
