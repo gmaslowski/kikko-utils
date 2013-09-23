@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>pl.kikko.utils</groupId>
     <artifactId>utils-parent</artifactId>
-    <version>0.2.1-RC</version>
+    <version>0.2.2-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>Kikko Utils</name>
 
