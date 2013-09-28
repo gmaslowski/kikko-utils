@@ -4,10 +4,7 @@
     <artifactId>kikko-test</artifactId>
     <packaging>jar</packaging>
     <name>Kikko Test</name>
-    <properties>
-        <junit.version>4.11</junit.version>
-        <org.mockito.version>1.8.5</org.mockito.version>
-    </properties>
+
 
     <parent>
         <artifactId>utils-parent</artifactId>
@@ -20,14 +17,13 @@
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
-            <version>${junit.version}</version>
         </dependency>
 
         <dependency>
             <groupId>org.mockito</groupId>
             <artifactId>mockito-core</artifactId>
-            <version>${org.mockito.version}</version>
         </dependency>
+
     </dependencies>
 
 </project>
